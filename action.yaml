@@ -1,0 +1,15 @@
+branding:
+  icon: "star"
+  color: "blue"
+
+name: "My Python Action"
+description: "This action prints a message."
+inputs:
+  message:
+    description: "Message to print"
+    required: true
+    default: "Hello, World!"
+runs:
+  using: "python"
+  steps:
+    - run: python main.py "${{ inputs.message }}"
